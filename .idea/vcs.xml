@@ -2,6 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/CSC320_Modules" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/CSC320_Modules/Module3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/CSC320_Modules/Module4" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Module3" vcs="Git" />
   </component>
 </project>
