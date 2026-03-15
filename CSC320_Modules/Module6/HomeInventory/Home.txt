@@ -1,0 +1,8 @@
+Square Feet: 5000
+Address: 1305 Galatic Place
+City: Castle Rock
+State: CO
+Zip Code: 80108
+Model Name: Model A
+Sale Status: sold
+----------------------

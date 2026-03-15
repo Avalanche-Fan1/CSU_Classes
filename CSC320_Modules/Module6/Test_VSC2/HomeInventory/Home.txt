@@ -1,0 +1,16 @@
+Square Feet: 3500
+Address: 1305 Galactic Place
+City: Castle Rock
+State: CO
+Zip Code: 80108
+Model Name: Model A
+Sale Status: available
+----------------------
+Square Feet: 1234
+Address: 5621 W Redfield Rd
+City: Glendale
+State: AZ
+Zip Code: 85306
+Model Name: Model K
+Sale Status: sold
+----------------------
