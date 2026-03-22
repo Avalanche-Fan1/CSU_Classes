@@ -5,11 +5,12 @@ public class CheckingAccount extends BankAccount{
     public void setInterestRate(double interestRate) {
         this.interestRate = interestRate;
     }
-
+    // Getter for interest rate
     public double getInterestRate() {
         return interestRate;
     }
 
+    // Withdrawl overrides SuperClass method to allow Overdraft //
     @Override
     public void withdrawl(double Withdrawl) {
         Balance -= Withdrawl;

@@ -4,10 +4,12 @@ public class BankAccount {
     int accountID;
     double Balance;
 
-    public BankAccount() {  // Default constructor
+    // Constructor //
+    public BankAccount() {
         Balance = 0;
     }
 
+    // Deposit Method //
     public void deposit(double Deposit) {
         Balance += Deposit;
         System.out.printf("You have made a deposit of: $%.2f%n", Deposit);
@@ -15,10 +17,12 @@ public class BankAccount {
         System.out.println();
     }
 
+    // Withdrawl Method //
     public void withdrawl(double Withdrawl) {
         Balance -= Withdrawl;
     }
 
+    //Setters for first name, last name, and Account ID //
     public void setFirstName(String firstName){
         this.firstName = firstName;
     }
@@ -30,6 +34,7 @@ public class BankAccount {
         this.accountID = accountID;
     }
 
+    //Getters for first name, last name, Account ID, and Balance //
     public String getFirstName(){
         return firstName;
     }
@@ -45,6 +50,7 @@ public class BankAccount {
         return Balance;
     }
 
+    // Print Account Summary //
     public void accountSummary(){
         System.out.println("Account ID: " + getAccountID());
         System.out.println(getLastName() + ", " + getFirstName());
