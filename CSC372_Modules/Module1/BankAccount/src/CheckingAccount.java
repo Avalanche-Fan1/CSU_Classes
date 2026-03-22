@@ -1,19 +1,9 @@
 public class CheckingAccount extends BankAccount{
     private double interestRate;
 
-    // Constructor
-    public CheckingAccount() {
-        super();
-    }
-
     // Setter for interest rate
     public void setInterestRate(double interestRate) {
         this.interestRate = interestRate;
-    }
-
-    // Getter for interest rate
-    public double getInterestRate() {
-        return interestRate;
     }
 
     public void processWithdrawl(double newWithdrawl) {
