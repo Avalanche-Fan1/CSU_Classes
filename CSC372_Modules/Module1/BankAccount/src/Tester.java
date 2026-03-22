@@ -25,7 +25,7 @@ public class Tester {
             System.out.print("Enter deposit amount: ");
             double deposit = scnr.nextDouble();
 
-            System.out.print("Enter withdrawal amount: ");
+            System.out.println("Enter withdrawal amount: ");
             double withdrawal = scnr.nextDouble();
 
             scnr.nextLine(); // clears leftover newline
