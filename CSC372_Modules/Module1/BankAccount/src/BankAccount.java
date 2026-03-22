@@ -46,8 +46,8 @@ public class BankAccount {
     }
 
     public void accountSummary(){
-        System.out.println("Account ID: " + accountID);
-        System.out.println(lastName + ", " + firstName);
-        System.out.printf("Account Balance: $%.2f%n", Balance);
+        System.out.println("Account ID: " + getAccountID());
+        System.out.println(lastName + ", " + getFirstName());
+        System.out.printf("Account Balance: $%.2f%n", getBalance());
     }
 }

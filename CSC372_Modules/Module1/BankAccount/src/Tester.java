@@ -38,7 +38,7 @@ public class Tester {
 
             // Process transactions
             account.deposit(deposit);
-            account.processWithdrawl(withdrawal);
+            account.withdrawl(withdrawal);
 
             System.out.println();
             account.displayAccount();
