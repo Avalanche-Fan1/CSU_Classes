@@ -92,10 +92,16 @@ public class BankBalance {
                 try {
 
                     double value = Double.parseDouble(myTextField.getText());
-                    accountBalance = value;
-                    updateBalanceLabel(balanceLabel);
-                    myTextField.setText("");   // clear the field
-                    initialBalanceButton.setEnabled(false);
+                    if (value <= 0) {
+                        balanceLabel.setText("Enter a positive number.");
+                        myTextField.setText("");
+                    }
+                    else {
+                        accountBalance = value;
+                        updateBalanceLabel(balanceLabel);
+                        myTextField.setText("");   // clear the field
+                        initialBalanceButton.setEnabled(false);
+                    }
                 }
                 catch (NumberFormatException ex) {
                     balanceLabel.setText("Please enter a valid number.");
@@ -111,10 +117,16 @@ public class BankBalance {
                 try {
 
                     double value = Double.parseDouble(myTextField.getText());
-                    accountBalance += value;
-                    updateBalanceLabel(balanceLabel);
-                    myTextField.setText("");// clears the field
-                    initialBalanceButton.setEnabled(false);
+                    if (value <= 0) {
+                        balanceLabel.setText("Enter a positive number.");
+                        myTextField.setText("");
+                    }
+                    else {
+                        accountBalance += value;
+                        updateBalanceLabel(balanceLabel);
+                        myTextField.setText("");// clears the field
+                        initialBalanceButton.setEnabled(false);
+                    }
                 }
                 catch (NumberFormatException ex) {
                     balanceLabel.setText("Please enter a valid number.");
@@ -128,12 +140,21 @@ public class BankBalance {
             public void actionPerformed(ActionEvent event) {
 
                 try {
-
                     double value = Double.parseDouble(myTextField.getText());
-                    accountBalance -= value;
-                    updateBalanceLabel(balanceLabel);
-                    myTextField.setText("");   // clears the field
-                    initialBalanceButton.setEnabled(false);
+                    if (value <= 0) {
+                        balanceLabel.setText("Enter a positive number.");
+                        myTextField.setText("");
+                    }
+                    else if (value > accountBalance) {
+                        balanceLabel.setText("Insufficient funds.");
+                        myTextField.setText("");
+                    }
+                    else {
+                        accountBalance -= value;
+                        updateBalanceLabel(balanceLabel);
+                        myTextField.setText("");   // clears the field
+                        initialBalanceButton.setEnabled(false);
+                    }
                 }
                 catch (NumberFormatException ex) {
                     balanceLabel.setText("Please enter a valid number.");
@@ -158,5 +179,4 @@ public class BankBalance {
         // Allow Frame and contents to be visible (Must happen after creation of all) //
         balanceFrame.setVisible(true);
     }
-
 }
