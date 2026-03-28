@@ -22,7 +22,7 @@ public class BankBalance {
 
     public static void main (String[] args) {
 
-        JFrame balanceFrame = new JFrame("Bank Balance App");
+        JFrame balanceFrame = new JFrame("Bank Balance App",null);
         balanceFrame.setLocationRelativeTo(null);
         balanceFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -146,7 +146,7 @@ public class BankBalance {
         exitButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent event) {
                 JOptionPane.showMessageDialog(
-                        null,
+                        balanceFrame,
                         "Final Balance: " + currency.format(accountBalance),
                         "Account Summary",
                         JOptionPane.PLAIN_MESSAGE
