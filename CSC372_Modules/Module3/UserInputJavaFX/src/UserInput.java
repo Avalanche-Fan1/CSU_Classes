@@ -57,7 +57,7 @@ public class UserInput extends Application  {
         });
 
         // Action to Change background color to random Green Hue //
-        colorMenu.setOnAction(event -> {
+        colorMenu.setOnAction( event -> {
             double hue = 100 + Math.random() * 40;   // green range (100°–140°)
             double saturation = 0.8;                 // strong color
             double brightness = 0.8;                 // not too dark
