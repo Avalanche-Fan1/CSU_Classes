@@ -44,8 +44,8 @@ public class UserInput extends Application  {
     // Method for changing background to Hue of Greeen //
     private void changeBackground() {
         double hue = 100 + Math.random() * 40;   // green range (100°–140°)
-        double saturation = 0.8;                 // strong color
-        double brightness = 0.8;                 // not too dark
+        double saturation = Math.random();                 // random saturation 0.0 - 1.0
+        double brightness = Math.random();                 // random brightness 0.0 = 1.0
 
         Color greenHue = Color.hsb(hue, saturation, brightness);
         vbox.setBackground(new Background(
