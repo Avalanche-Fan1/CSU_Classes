@@ -14,7 +14,56 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class UserInput extends Application  {
+    // Create textfield //
     TextField outputField = new TextField();
+
+    // Create VBOX local variable //
+    VBox vbox;
+
+    //  Method for Showing Date and Time //
+    private void showDateTime() {
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss");
+        String formattedDateTime = now.format(formatter);
+
+        // Print the result //
+        outputField.setText(formattedDateTime);
+    };
+
+    // Method for writing to file log.txt //
+    private void writeToFile() {
+        try {
+            FileWriter writer = new FileWriter("log.txt", true); // true = append
+            writer.write(outputField.getText() + "\n");
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Method for changing background to Hue of Greeen //
+    private void changeBackground() {
+        double hue = 100 + Math.random() * 40;   // green range (100°–140°)
+        double saturation = 0.8;                 // strong color
+        double brightness = 0.8;                 // not too dark
+
+        Color greenHue = Color.hsb(hue, saturation, brightness);
+        vbox.setBackground(new Background(
+                new BackgroundFill(greenHue, null, null)));
+
+        // Display Hex Value of color into TextField //
+        int r = (int)(greenHue.getRed() * 255);
+        int g = (int)(greenHue.getGreen() * 255);
+        int b = (int)(greenHue.getBlue() * 255);
+        String hex = String.format("#%02X%02X%02X", r, g, b);
+        outputField.setText(hex);
+    }
+
+    // Method for exiting program //
+    private void exitProgram() {
+        System.exit(0);
+    }
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         primaryStage.setTitle("Menu Example");
@@ -27,7 +76,7 @@ public class UserInput extends Application  {
 
         // Create Main Menu and insert Menu Options //
         MenuButton menuButton = new MenuButton("Main Menu", null, dateMenu, fileMenu, colorMenu, exitMenu);
-        VBox vbox = new VBox(menuButton, outputField);
+        vbox = new VBox(menuButton, outputField);
         vbox.setSpacing(15);
         Scene scene = new Scene(vbox, 300, 200);
         primaryStage.setScene(scene);
@@ -36,48 +85,16 @@ public class UserInput extends Application  {
         outputField.setMaxWidth(150);
 
         // Action for Menu Date & Time //
-        dateMenu.setOnAction(event -> {
-            LocalDateTime now = LocalDateTime.now();
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss");
-            String formattedDateTime = now.format(formatter);
-
-            // Print the result //
-            outputField.setText(formattedDateTime);
-        });
+        dateMenu.setOnAction(event -> showDateTime());
 
         // Action for Writing to file log.txt //
-        fileMenu.setOnAction(event -> {
-            try {
-                FileWriter writer = new FileWriter("log.txt", true); // true = append
-                writer.write(outputField.getText() + "\n");
-                writer.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        });
+        fileMenu.setOnAction(event -> writeToFile());
 
         // Action to Change background color to random Green Hue //
-        colorMenu.setOnAction( event -> {
-            double hue = 100 + Math.random() * 40;   // green range (100°–140°)
-            double saturation = 0.8;                 // strong color
-            double brightness = 0.8;                 // not too dark
-
-            Color greenHue = Color.hsb(hue, saturation, brightness);
-            vbox.setBackground(new Background(
-                    new BackgroundFill(greenHue, null, null)));
-
-            // Display Hex Value of color into TextField //
-            int r = (int)(greenHue.getRed() * 255);
-            int g = (int)(greenHue.getGreen() * 255);
-            int b = (int)(greenHue.getBlue() * 255);
-            String hex = String.format("#%02X%02X%02X", r, g, b);
-            outputField.setText(hex);
-        });
+        colorMenu.setOnAction(e -> changeBackground());
 
         // Action to Exits Application //
-        exitMenu.setOnAction(event -> {
-            System.exit(0);
-        });
+        exitMenu.setOnAction(e -> exitProgram());
 
     }
     public static void main(String[] args) {
