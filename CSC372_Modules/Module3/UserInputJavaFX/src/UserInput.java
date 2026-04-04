@@ -66,7 +66,7 @@ public class UserInput extends Application  {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        primaryStage.setTitle("Menu Example");
+        primaryStage.setTitle("User Interface");
 
         // Create Menu Options to go into Main Menu //
         MenuItem dateMenu = new MenuItem("Date/Time");
