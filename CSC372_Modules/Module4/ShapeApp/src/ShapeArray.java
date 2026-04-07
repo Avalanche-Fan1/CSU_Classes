@@ -1,9 +1,8 @@
-import java.lang.reflect.Array;
 
 public class ShapeArray {
     public static void main(String[] args) {
 
-        // Create Array with 3 place holders //
+        // Create Array with 3 placeholders //
         Shape[] shapeArray = new Shape[3];
 
         // Add one of each shape type to the array //
