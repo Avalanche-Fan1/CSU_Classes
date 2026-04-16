@@ -8,6 +8,7 @@ public class productApp {
         if (i >= userNums.length) {
             return;
         }
+        // Recursive Case //
         System.out.print(" Enter number " + (i + 1) + ": ");
         userNums[i] = scnr.nextInt();
 
