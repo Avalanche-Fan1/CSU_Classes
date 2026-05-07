@@ -1,3 +1,16 @@
+/*
+ * Book Class
+ *
+ * This class represents a single book object within the library system.
+ * It stores information about a book including the ID, title, author,
+ * ISBN number, and total page count.
+ *
+ * The class includes:
+ * - Default and parameterized constructors
+ * - Getter and setter methods
+ * - A method to display book information
+ *
+ */
 public class Book {
     private int bookID;
     private String bookTitle;

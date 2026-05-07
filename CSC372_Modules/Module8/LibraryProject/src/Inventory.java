@@ -1,5 +1,19 @@
 import java.util.ArrayList;
 
+/*
+ * Inventory Class
+ *
+ * This class manages the library inventory system by storing
+ * available and borrowed books using ArrayLists.
+ *
+ * The class provides functionality to:
+ * - Add books to the library
+ * - Search for books by title
+ * - Borrow books
+ * - Return books
+ * - Display all available books
+ *
+*/
 public class Inventory {
     private ArrayList<Book> availableBooks;
     private ArrayList<Book> borrowedBooks;

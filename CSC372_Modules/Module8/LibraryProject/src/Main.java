@@ -1,4 +1,22 @@
 import java.util.Scanner;
+
+/*
+ * Main Class
+ *
+ * This class contains the main method and serves as the
+ * user interface for the Home Library Management System.
+ *
+ * The program allows users to:
+ * - Add books
+ * - Borrow books
+ * - Return books
+ * - Search for books by title
+ * - Display all books in the inventory
+ *
+ * The menu system uses user input along with exception
+ * handling to provide a simple console-based application.
+ *
+ */
 public class Main {
 
     public static void main(String[] args) {
