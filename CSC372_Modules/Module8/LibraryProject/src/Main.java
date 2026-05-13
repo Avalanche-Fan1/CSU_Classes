@@ -130,18 +130,18 @@ public class Main {
     }
 
     public static void printMenu() {
-        try {
-            System.out.println("\nHome Library Menu");
-            System.out.println("1. Add Book");
-            System.out.println("2. Borrow Book");
-            System.out.println("3. Return Book");
-            System.out.println("4. Search by Title");
-            System.out.println("5. Print All Books");
-            System.out.println("6. Exit");
 
-            System.out.print("Enter choice: ");
+        try {
+
+            System.out.println("\n1. Add Book\t\t3. Return Book\t\t5. Print All Books");
+            System.out.println("2. Borrow Book\t4. Search by Title\t6. Exit");
+
+            System.out.print("\nEnter choice: ");
+
         } catch (Exception e) {
+
             System.out.println("Failed to print menu: " + e.getMessage());
+
         }
     }
 
