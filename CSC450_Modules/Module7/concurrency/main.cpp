@@ -34,5 +34,5 @@ int main() {
     std::thread thread2(countDown);
     thread2.join();
 
-    return 0;
+    return 0
 }
