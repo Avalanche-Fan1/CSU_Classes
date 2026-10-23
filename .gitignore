@@ -12,3 +12,6 @@ out/
 # Compiled files
 *.class
 *.o
+
+# Project-level Git ignore files created by IDEs
+**/.gitignore
