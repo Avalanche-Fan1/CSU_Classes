@@ -1,1 +1,14 @@
-/.metadata/
+# Eclipse
+.metadata/
+
+# macOS
+.DS_Store
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# Compiled files
+*.class
+*.o
